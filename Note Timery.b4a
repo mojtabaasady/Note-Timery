@@ -1,12 +1,14 @@
 ﻿Build1=Default,b4a.example
-File1=Layout.bal
+File1=icon.png
+File2=Layout_Main.bal
 FileGroup1=Default Group
+FileGroup2=Default Group
 Group=Default Group
 Library1=core
 Library2=xui
-ManifestCode='This code will be applied to the manifest file during compilation.~\n~'You do not need to modify it in most cases.~\n~'See this link for for more information: https://www.b4x.com/forum/showthread.php?p=78136~\n~AddManifestText(~\n~<uses-sdk android:minSdkVersion="21" android:targetSdkVersion="33"/>~\n~<supports-screens android:largeScreens="true" ~\n~    android:normalScreens="true" ~\n~    android:smallScreens="true" ~\n~    android:anyDensity="true"/>)~\n~SetApplicationAttribute(android:icon, "@drawable/icon")~\n~SetApplicationAttribute(android:label, "$LABEL$")~\n~CreateResourceFromFile(Macro, Themes.LightTheme)~\n~'End of default text.~\n~
+ManifestCode='This code will be applied to the manifest file during compilation.~\n~'You do not need to modify it in most cases.~\n~'See this link for for more information: https://www.b4x.com/forum/showthread.php?p=78136~\n~AddManifestText(~\n~<uses-sdk android:minSdkVersion="21" android:targetSdkVersion="34"/>~\n~<supports-screens android:largeScreens="true" ~\n~    android:normalScreens="true" ~\n~    android:smallScreens="true" ~\n~    android:anyDensity="true"/>)~\n~SetApplicationAttribute(android:icon, "@drawable/icon")~\n~SetApplicationAttribute(android:label, "$LABEL$")~\n~CreateResourceFromFile(Macro, Themes.LightTheme)~\n~'End of default text.~\n~
 Module1=Starter
-NumberOfFiles=1
+NumberOfFiles=2
 NumberOfLibraries=2
 NumberOfModules=1
 Version=13
@@ -22,7 +24,7 @@ Version=13
 
 #Region  Activity Attributes 
 	#FullScreen: False
-	#IncludeTitle: True
+	#IncludeTitle: False
 #End Region
 
 Sub Process_Globals
@@ -33,10 +35,21 @@ End Sub
 
 Sub Globals
 	'These global variables will be redeclared each time the activity is created.
+	Dim Text1,Text2 As String
+	Private Label_AddNewNote As Label
+	Private Label_ClearNewNote As Label
+	Private Label_CloseNewNote As Label
+	Private EditText_Note As EditText
+	Private ListView_Note As ListView
+	Private EditText_Timer_HH As EditText
+	Private EditText_Timer_MM As EditText
+	Private EditText_Date_MM As EditText
+	Private EditText_Date_DD As EditText
 End Sub
 
 Sub Activity_Create(FirstTime As Boolean)
-	Activity.LoadLayout("Layout")
+	Activity.LoadLayout("Layout_Main")
+	StartApp
 End Sub
 
 Sub Activity_Resume
@@ -47,3 +60,76 @@ Sub Activity_Pause (UserClosed As Boolean)
 
 End Sub
 
+Sub StartApp
+	
+	EditText_Timer_HH.text=DateTime.GetHour(DateTime.Now)
+	EditText_Timer_MM.text=DateTime.GetMinute(DateTime.Now)
+	EditText_Date_MM.text=DateTime.GetMonth(DateTime.Now)
+	EditText_Date_DD.text=DateTime.GetDayOfMonth(DateTime.Now)
+
+End Sub
+
+Private Sub Label_AddNewNote_Click
+	Text1=EditText_Note.Text
+	Text2="Time : "&EditText_Timer_HH.text&":"&EditText_Timer_MM.text & " Date : "&EditText_Date_MM.text&"/"&EditText_Date_DD.text
+	ListView_Note.AddSingleLine("New Timer")
+	ListView_Note.AddTwoLinesAndBitmap(Text1, Text2, LoadBitmap(File.DirAssets, "icon.png"))
+End Sub
+
+Private Sub Label_CloseNewNote_Click
+	
+End Sub
+
+Private Sub Label_ClearNewNote_Click
+	
+End Sub
+
+
+
+Private Sub ListView_Note_ItemClick (Position As Int, Value As Object)
+	
+End Sub
+
+Private Sub ListView_Note_ItemLongClick (Position As Int, Value As Object)
+	
+End Sub
+
+Private Sub EditText_Note_TextChanged (Old As String, New As String)
+	
+End Sub
+
+Private Sub Spinner_Date_DD_ItemClick (Position As Int, Value As Object)
+	
+End Sub
+
+Private Sub Spinner_Date_MM_ItemClick (Position As Int, Value As Object)
+	
+End Sub
+
+Private Sub Spinner_Date_YY_ItemClick (Position As Int, Value As Object)
+	
+End Sub
+
+Private Sub Spinner_Timer_MM_ItemClick (Position As Int, Value As Object)
+	
+End Sub
+
+Private Sub Spinner_Timer_HH_ItemClick (Position As Int, Value As Object)
+	
+End Sub
+
+Private Sub EditText_Date_DD_TextChanged (Old As String, New As String)
+	
+End Sub
+
+Private Sub EditText_Date_MM_TextChanged (Old As String, New As String)
+	
+End Sub
+
+Private Sub EditText_Timer_MM_TextChanged (Old As String, New As String)
+	
+End Sub
+
+Private Sub EditText_Timer_HH_TextChanged (Old As String, New As String)
+	
+End Sub

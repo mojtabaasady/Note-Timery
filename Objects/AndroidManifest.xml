@@ -6,14 +6,14 @@
 	android:versionName="20.24.03.01.00"
 	android:installLocation="internalOnly">
 	
-	<uses-sdk android:minSdkVersion="21" android:targetSdkVersion="33"/>
+	<uses-sdk android:minSdkVersion="21" android:targetSdkVersion="34"/>
 	<supports-screens android:largeScreens="true" 
 	    android:normalScreens="true" 
 	    android:smallScreens="true" 
 	    android:anyDensity="true"/>
 	<uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
 	<application
-		android:name="android.support.multidex.MultiDexApplication"
+		android:name="androidx.multidex.MultiDexApplication"
 		android:icon="@drawable/icon"
 		android:label="Note Timery"
 		android:theme="@style/LightTheme">

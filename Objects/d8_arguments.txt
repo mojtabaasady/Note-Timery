@@ -1,0 +1,25 @@
+--release
+--output
+D:\Android Projects\Note Timery\Note-Timery\Objects
+--lib
+D:\Android\platforms\android-33\android.jar
+--min-api
+21
+D:\Android\tools\..\extras\b4a_local\unpacked-b4ashared-63860249976000\dex_v1\b4ashared.zip
+d:\android\tools\..\extras\b4a_remote\androidx\multidex\multidex\2.0.1\unpacked-multidex-2.0.1\jars\classes.zip
+D:\Android\tools\..\extras\b4a_local\unpacked-core-63860249976000\dex_v1\core.zip
+D:\Android\tools\..\extras\b4a_local\unpacked-xui-63860249976000\dex_v1\xui.zip
+D:\Android Projects\Note Timery\Note-Timery\Objects\dexed\b4a\example\main$1.dex
+D:\Android Projects\Note Timery\Note-Timery\Objects\dexed\b4a\example\main$B4AMenuItemsClickListener.dex
+D:\Android Projects\Note Timery\Note-Timery\Objects\dexed\b4a\example\main$HandleKeyDelayed.dex
+D:\Android Projects\Note Timery\Note-Timery\Objects\dexed\b4a\example\main$ResumeMessage.dex
+D:\Android Projects\Note Timery\Note-Timery\Objects\dexed\b4a\example\main$WaitForLayout.dex
+D:\Android Projects\Note Timery\Note-Timery\Objects\dexed\b4a\example\main.dex
+D:\Android Projects\Note Timery\Note-Timery\Objects\dexed\b4a\example\R$drawable.dex
+D:\Android Projects\Note Timery\Note-Timery\Objects\dexed\b4a\example\R$style.dex
+D:\Android Projects\Note Timery\Note-Timery\Objects\dexed\b4a\example\R.dex
+D:\Android Projects\Note Timery\Note-Timery\Objects\dexed\b4a\example\starter$1.dex
+D:\Android Projects\Note Timery\Note-Timery\Objects\dexed\b4a\example\starter$2.dex
+D:\Android Projects\Note Timery\Note-Timery\Objects\dexed\b4a\example\starter$starter_BR.dex
+D:\Android Projects\Note Timery\Note-Timery\Objects\dexed\b4a\example\starter.dex
+D:\Android Projects\Note Timery\Note-Timery\Objects\dexed\b4a\example\designerscripts\LS_layout_main.dex
