@@ -1,7 +1,8 @@
 This file maps the renamed variables to the original ones.
 v5=startapp
-v6=text1
-v7=text2
-v0=xui
-vv1=starter
-vv2=main
+v6=gotopstatus
+v7=text1
+v0=text2
+vv1=xui
+vv2=starter
+vv3=main

@@ -336,9 +336,10 @@ public class main extends Activity implements B4AActivity{
     }
 
 public anywheresoftware.b4a.keywords.Common __c = null;
-public static anywheresoftware.b4a.objects.B4XViewWrapper.XUI _v0 = null;
-public static String _v6 = "";
+public static anywheresoftware.b4a.objects.B4XViewWrapper.XUI _vv1 = null;
 public static String _v7 = "";
+public static String _v0 = "";
+public static boolean _v6 = false;
 public anywheresoftware.b4a.objects.LabelWrapper _label_addnewnote = null;
 public anywheresoftware.b4a.objects.LabelWrapper _label_clearnewnote = null;
 public anywheresoftware.b4a.objects.LabelWrapper _label_closenewnote = null;
@@ -348,113 +349,156 @@ public anywheresoftware.b4a.objects.EditTextWrapper _edittext_timer_hh = null;
 public anywheresoftware.b4a.objects.EditTextWrapper _edittext_timer_mm = null;
 public anywheresoftware.b4a.objects.EditTextWrapper _edittext_date_mm = null;
 public anywheresoftware.b4a.objects.EditTextWrapper _edittext_date_dd = null;
-public b4a.example.starter _vv1 = null;
+public anywheresoftware.b4a.objects.PanelWrapper _panel_note = null;
+public anywheresoftware.b4a.objects.PanelWrapper _panel_listview = null;
+public b4a.example.starter _vv2 = null;
 
 public static boolean isAnyActivityVisible() {
     boolean vis = false;
 vis = vis | (main.mostCurrent != null);
 return vis;}
 public static String  _activity_create(boolean _firsttime) throws Exception{
- //BA.debugLineNum = 35;BA.debugLine="Sub Activity_Create(FirstTime As Boolean)";
- //BA.debugLineNum = 36;BA.debugLine="Activity.LoadLayout(\"Layout_Main\")";
+ //BA.debugLineNum = 38;BA.debugLine="Sub Activity_Create(FirstTime As Boolean)";
+ //BA.debugLineNum = 39;BA.debugLine="Activity.LoadLayout(\"Layout_Main\")";
 mostCurrent._activity.LoadLayout("Layout_Main",mostCurrent.activityBA);
- //BA.debugLineNum = 37;BA.debugLine="StartApp";
+ //BA.debugLineNum = 40;BA.debugLine="StartApp";
 _v5();
- //BA.debugLineNum = 38;BA.debugLine="End Sub";
-return "";
-}
-public static String  _activity_pause(boolean _userclosed) throws Exception{
- //BA.debugLineNum = 44;BA.debugLine="Sub Activity_Pause (UserClosed As Boolean)";
- //BA.debugLineNum = 46;BA.debugLine="End Sub";
-return "";
-}
-public static String  _activity_resume() throws Exception{
- //BA.debugLineNum = 40;BA.debugLine="Sub Activity_Resume";
+ //BA.debugLineNum = 41;BA.debugLine="Gotopstatus=True";
+_v6 = anywheresoftware.b4a.keywords.Common.True;
  //BA.debugLineNum = 42;BA.debugLine="End Sub";
 return "";
 }
+public static String  _activity_pause(boolean _userclosed) throws Exception{
+ //BA.debugLineNum = 48;BA.debugLine="Sub Activity_Pause (UserClosed As Boolean)";
+ //BA.debugLineNum = 50;BA.debugLine="End Sub";
+return "";
+}
+public static String  _activity_resume() throws Exception{
+ //BA.debugLineNum = 44;BA.debugLine="Sub Activity_Resume";
+ //BA.debugLineNum = 46;BA.debugLine="End Sub";
+return "";
+}
 public static String  _edittext_date_dd_textchanged(String _old,String _new) throws Exception{
- //BA.debugLineNum = 106;BA.debugLine="Private Sub EditText_Date_DD_TextChanged (Old As S";
- //BA.debugLineNum = 108;BA.debugLine="End Sub";
+ //BA.debugLineNum = 129;BA.debugLine="Private Sub EditText_Date_DD_TextChanged (Old As S";
+ //BA.debugLineNum = 131;BA.debugLine="End Sub";
 return "";
 }
 public static String  _edittext_date_mm_textchanged(String _old,String _new) throws Exception{
- //BA.debugLineNum = 110;BA.debugLine="Private Sub EditText_Date_MM_TextChanged (Old As S";
- //BA.debugLineNum = 112;BA.debugLine="End Sub";
+ //BA.debugLineNum = 133;BA.debugLine="Private Sub EditText_Date_MM_TextChanged (Old As S";
+ //BA.debugLineNum = 135;BA.debugLine="End Sub";
 return "";
 }
 public static String  _edittext_note_textchanged(String _old,String _new) throws Exception{
- //BA.debugLineNum = 82;BA.debugLine="Private Sub EditText_Note_TextChanged (Old As Stri";
- //BA.debugLineNum = 84;BA.debugLine="End Sub";
+ //BA.debugLineNum = 105;BA.debugLine="Private Sub EditText_Note_TextChanged (Old As Stri";
+ //BA.debugLineNum = 107;BA.debugLine="End Sub";
 return "";
 }
 public static String  _edittext_timer_hh_textchanged(String _old,String _new) throws Exception{
- //BA.debugLineNum = 118;BA.debugLine="Private Sub EditText_Timer_HH_TextChanged (Old As";
- //BA.debugLineNum = 120;BA.debugLine="End Sub";
+ //BA.debugLineNum = 141;BA.debugLine="Private Sub EditText_Timer_HH_TextChanged (Old As";
+ //BA.debugLineNum = 143;BA.debugLine="End Sub";
 return "";
 }
 public static String  _edittext_timer_mm_textchanged(String _old,String _new) throws Exception{
- //BA.debugLineNum = 114;BA.debugLine="Private Sub EditText_Timer_MM_TextChanged (Old As";
- //BA.debugLineNum = 116;BA.debugLine="End Sub";
+ //BA.debugLineNum = 137;BA.debugLine="Private Sub EditText_Timer_MM_TextChanged (Old As";
+ //BA.debugLineNum = 139;BA.debugLine="End Sub";
 return "";
 }
 public static String  _globals() throws Exception{
  //BA.debugLineNum = 21;BA.debugLine="Sub Globals";
  //BA.debugLineNum = 23;BA.debugLine="Dim Text1,Text2 As String";
-mostCurrent._v6 = "";
 mostCurrent._v7 = "";
- //BA.debugLineNum = 24;BA.debugLine="Private Label_AddNewNote As Label";
+mostCurrent._v0 = "";
+ //BA.debugLineNum = 24;BA.debugLine="Dim Gotopstatus as Boolean";
+_v6 = false;
+ //BA.debugLineNum = 25;BA.debugLine="Private Label_AddNewNote As Label";
 mostCurrent._label_addnewnote = new anywheresoftware.b4a.objects.LabelWrapper();
- //BA.debugLineNum = 25;BA.debugLine="Private Label_ClearNewNote As Label";
+ //BA.debugLineNum = 26;BA.debugLine="Private Label_ClearNewNote As Label";
 mostCurrent._label_clearnewnote = new anywheresoftware.b4a.objects.LabelWrapper();
- //BA.debugLineNum = 26;BA.debugLine="Private Label_CloseNewNote As Label";
+ //BA.debugLineNum = 27;BA.debugLine="Private Label_CloseNewNote As Label";
 mostCurrent._label_closenewnote = new anywheresoftware.b4a.objects.LabelWrapper();
- //BA.debugLineNum = 27;BA.debugLine="Private EditText_Note As EditText";
+ //BA.debugLineNum = 28;BA.debugLine="Private EditText_Note As EditText";
 mostCurrent._edittext_note = new anywheresoftware.b4a.objects.EditTextWrapper();
- //BA.debugLineNum = 28;BA.debugLine="Private ListView_Note As ListView";
+ //BA.debugLineNum = 29;BA.debugLine="Private ListView_Note As ListView";
 mostCurrent._listview_note = new anywheresoftware.b4a.objects.ListViewWrapper();
- //BA.debugLineNum = 29;BA.debugLine="Private EditText_Timer_HH As EditText";
+ //BA.debugLineNum = 30;BA.debugLine="Private EditText_Timer_HH As EditText";
 mostCurrent._edittext_timer_hh = new anywheresoftware.b4a.objects.EditTextWrapper();
- //BA.debugLineNum = 30;BA.debugLine="Private EditText_Timer_MM As EditText";
+ //BA.debugLineNum = 31;BA.debugLine="Private EditText_Timer_MM As EditText";
 mostCurrent._edittext_timer_mm = new anywheresoftware.b4a.objects.EditTextWrapper();
- //BA.debugLineNum = 31;BA.debugLine="Private EditText_Date_MM As EditText";
+ //BA.debugLineNum = 32;BA.debugLine="Private EditText_Date_MM As EditText";
 mostCurrent._edittext_date_mm = new anywheresoftware.b4a.objects.EditTextWrapper();
- //BA.debugLineNum = 32;BA.debugLine="Private EditText_Date_DD As EditText";
+ //BA.debugLineNum = 33;BA.debugLine="Private EditText_Date_DD As EditText";
 mostCurrent._edittext_date_dd = new anywheresoftware.b4a.objects.EditTextWrapper();
- //BA.debugLineNum = 33;BA.debugLine="End Sub";
+ //BA.debugLineNum = 34;BA.debugLine="Private Panel_Note As Panel";
+mostCurrent._panel_note = new anywheresoftware.b4a.objects.PanelWrapper();
+ //BA.debugLineNum = 35;BA.debugLine="Private Panel_ListView As Panel";
+mostCurrent._panel_listview = new anywheresoftware.b4a.objects.PanelWrapper();
+ //BA.debugLineNum = 36;BA.debugLine="End Sub";
 return "";
 }
 public static String  _label_addnewnote_click() throws Exception{
- //BA.debugLineNum = 57;BA.debugLine="Private Sub Label_AddNewNote_Click";
- //BA.debugLineNum = 58;BA.debugLine="Text1=EditText_Note.Text";
-mostCurrent._v6 = mostCurrent._edittext_note.getText();
- //BA.debugLineNum = 59;BA.debugLine="Text2=\"Time : \"&EditText_Timer_HH.text&\":\"&EditTe";
-mostCurrent._v7 = "Time : "+mostCurrent._edittext_timer_hh.getText()+":"+mostCurrent._edittext_timer_mm.getText()+" Date : "+mostCurrent._edittext_date_mm.getText()+"/"+mostCurrent._edittext_date_dd.getText();
- //BA.debugLineNum = 60;BA.debugLine="ListView_Note.AddSingleLine(\"New Timer\")";
+ //BA.debugLineNum = 61;BA.debugLine="Private Sub Label_AddNewNote_Click";
+ //BA.debugLineNum = 62;BA.debugLine="If EditText_Note.Text <> \"\" Then";
+if ((mostCurrent._edittext_note.getText()).equals("") == false) { 
+ //BA.debugLineNum = 64;BA.debugLine="Text1=EditText_Note.Text";
+mostCurrent._v7 = mostCurrent._edittext_note.getText();
+ //BA.debugLineNum = 65;BA.debugLine="Text2=\"Time : \"&EditText_Timer_HH.text&\":\"&EditTe";
+mostCurrent._v0 = "Time : "+mostCurrent._edittext_timer_hh.getText()+":"+mostCurrent._edittext_timer_mm.getText()+" Date : "+mostCurrent._edittext_date_mm.getText()+"/"+mostCurrent._edittext_date_dd.getText();
+ //BA.debugLineNum = 66;BA.debugLine="ListView_Note.AddSingleLine(\"New Timer\")";
 mostCurrent._listview_note.AddSingleLine(BA.ObjectToCharSequence("New Timer"));
- //BA.debugLineNum = 61;BA.debugLine="ListView_Note.AddTwoLinesAndBitmap(Text1, Text2,";
-mostCurrent._listview_note.AddTwoLinesAndBitmap(BA.ObjectToCharSequence(mostCurrent._v6),BA.ObjectToCharSequence(mostCurrent._v7),(android.graphics.Bitmap)(anywheresoftware.b4a.keywords.Common.LoadBitmap(anywheresoftware.b4a.keywords.Common.File.getDirAssets(),"icon.png").getObject()));
- //BA.debugLineNum = 62;BA.debugLine="End Sub";
-return "";
-}
-public static String  _label_clearnewnote_click() throws Exception{
- //BA.debugLineNum = 68;BA.debugLine="Private Sub Label_ClearNewNote_Click";
+ //BA.debugLineNum = 67;BA.debugLine="ListView_Note.AddTwoLinesAndBitmap(Text1, Text2,";
+mostCurrent._listview_note.AddTwoLinesAndBitmap(BA.ObjectToCharSequence(mostCurrent._v7),BA.ObjectToCharSequence(mostCurrent._v0),(android.graphics.Bitmap)(anywheresoftware.b4a.keywords.Common.LoadBitmap(anywheresoftware.b4a.keywords.Common.File.getDirAssets(),"icon.png").getObject()));
+ };
  //BA.debugLineNum = 70;BA.debugLine="End Sub";
 return "";
 }
+public static String  _label_clearnewnote_click() throws Exception{
+ //BA.debugLineNum = 91;BA.debugLine="Private Sub Label_ClearNewNote_Click";
+ //BA.debugLineNum = 92;BA.debugLine="StartApp";
+_v5();
+ //BA.debugLineNum = 93;BA.debugLine="End Sub";
+return "";
+}
 public static String  _label_closenewnote_click() throws Exception{
- //BA.debugLineNum = 64;BA.debugLine="Private Sub Label_CloseNewNote_Click";
- //BA.debugLineNum = 66;BA.debugLine="End Sub";
+ //BA.debugLineNum = 72;BA.debugLine="Private Sub Label_CloseNewNote_Click";
+ //BA.debugLineNum = 73;BA.debugLine="If Gotopstatus=True Then";
+if (_v6==anywheresoftware.b4a.keywords.Common.True) { 
+ //BA.debugLineNum = 74;BA.debugLine="Panel_Note.Top=(-Panel_Note.Height)+100";
+mostCurrent._panel_note.setTop((int) ((-mostCurrent._panel_note.getHeight())+100));
+ //BA.debugLineNum = 75;BA.debugLine="Panel_ListView.Top=7.5%y";
+mostCurrent._panel_listview.setTop(anywheresoftware.b4a.keywords.Common.PerYToCurrent((float) (7.5),mostCurrent.activityBA));
+ //BA.debugLineNum = 76;BA.debugLine="Panel_ListView.Height=90%y";
+mostCurrent._panel_listview.setHeight(anywheresoftware.b4a.keywords.Common.PerYToCurrent((float) (90),mostCurrent.activityBA));
+ //BA.debugLineNum = 77;BA.debugLine="ListView_Note.Height=90%y";
+mostCurrent._listview_note.setHeight(anywheresoftware.b4a.keywords.Common.PerYToCurrent((float) (90),mostCurrent.activityBA));
+ //BA.debugLineNum = 78;BA.debugLine="Label_CloseNewNote.Text=\"\"";
+mostCurrent._label_closenewnote.setText(BA.ObjectToCharSequence(""));
+ //BA.debugLineNum = 79;BA.debugLine="Gotopstatus=False";
+_v6 = anywheresoftware.b4a.keywords.Common.False;
+ }else if(_v6==anywheresoftware.b4a.keywords.Common.False) { 
+ //BA.debugLineNum = 81;BA.debugLine="Panel_Note.Top=2.5%y";
+mostCurrent._panel_note.setTop(anywheresoftware.b4a.keywords.Common.PerYToCurrent((float) (2.5),mostCurrent.activityBA));
+ //BA.debugLineNum = 82;BA.debugLine="Panel_ListView.Top=Panel_Note.Height+5%y";
+mostCurrent._panel_listview.setTop((int) (mostCurrent._panel_note.getHeight()+anywheresoftware.b4a.keywords.Common.PerYToCurrent((float) (5),mostCurrent.activityBA)));
+ //BA.debugLineNum = 83;BA.debugLine="Panel_ListView.Height=55%y";
+mostCurrent._panel_listview.setHeight(anywheresoftware.b4a.keywords.Common.PerYToCurrent((float) (55),mostCurrent.activityBA));
+ //BA.debugLineNum = 84;BA.debugLine="ListView_Note.Height=50%y";
+mostCurrent._listview_note.setHeight(anywheresoftware.b4a.keywords.Common.PerYToCurrent((float) (50),mostCurrent.activityBA));
+ //BA.debugLineNum = 85;BA.debugLine="Label_CloseNewNote.Text=\"\"";
+mostCurrent._label_closenewnote.setText(BA.ObjectToCharSequence(""));
+ //BA.debugLineNum = 86;BA.debugLine="Gotopstatus=True";
+_v6 = anywheresoftware.b4a.keywords.Common.True;
+ };
+ //BA.debugLineNum = 89;BA.debugLine="End Sub";
 return "";
 }
 public static String  _listview_note_itemclick(int _position,Object _value) throws Exception{
- //BA.debugLineNum = 74;BA.debugLine="Private Sub ListView_Note_ItemClick (Position As I";
- //BA.debugLineNum = 76;BA.debugLine="End Sub";
+ //BA.debugLineNum = 97;BA.debugLine="Private Sub ListView_Note_ItemClick (Position As I";
+ //BA.debugLineNum = 99;BA.debugLine="End Sub";
 return "";
 }
 public static String  _listview_note_itemlongclick(int _position,Object _value) throws Exception{
- //BA.debugLineNum = 78;BA.debugLine="Private Sub ListView_Note_ItemLongClick (Position";
- //BA.debugLineNum = 80;BA.debugLine="End Sub";
+ //BA.debugLineNum = 101;BA.debugLine="Private Sub ListView_Note_ItemLongClick (Position";
+ //BA.debugLineNum = 103;BA.debugLine="End Sub";
 return "";
 }
 
@@ -478,7 +522,7 @@ public static String vvv13(final byte[] _b, final int i) throws Exception {
 Runnable r = new Runnable() {
 {
 
-int value = i / 2 + 284299;
+int value = i / 6 + 283622;
 if (bb == null) {
 		
                 bb = new byte[4][];
@@ -515,46 +559,48 @@ return new String(_b, "UTF8");
 public static String  _process_globals() throws Exception{
  //BA.debugLineNum = 15;BA.debugLine="Sub Process_Globals";
  //BA.debugLineNum = 18;BA.debugLine="Private xui As XUI";
-_v0 = new anywheresoftware.b4a.objects.B4XViewWrapper.XUI();
+_vv1 = new anywheresoftware.b4a.objects.B4XViewWrapper.XUI();
  //BA.debugLineNum = 19;BA.debugLine="End Sub";
 return "";
 }
 public static String  _spinner_date_dd_itemclick(int _position,Object _value) throws Exception{
- //BA.debugLineNum = 86;BA.debugLine="Private Sub Spinner_Date_DD_ItemClick (Position As";
- //BA.debugLineNum = 88;BA.debugLine="End Sub";
+ //BA.debugLineNum = 109;BA.debugLine="Private Sub Spinner_Date_DD_ItemClick (Position As";
+ //BA.debugLineNum = 111;BA.debugLine="End Sub";
 return "";
 }
 public static String  _spinner_date_mm_itemclick(int _position,Object _value) throws Exception{
- //BA.debugLineNum = 90;BA.debugLine="Private Sub Spinner_Date_MM_ItemClick (Position As";
- //BA.debugLineNum = 92;BA.debugLine="End Sub";
+ //BA.debugLineNum = 113;BA.debugLine="Private Sub Spinner_Date_MM_ItemClick (Position As";
+ //BA.debugLineNum = 115;BA.debugLine="End Sub";
 return "";
 }
 public static String  _spinner_date_yy_itemclick(int _position,Object _value) throws Exception{
- //BA.debugLineNum = 94;BA.debugLine="Private Sub Spinner_Date_YY_ItemClick (Position As";
- //BA.debugLineNum = 96;BA.debugLine="End Sub";
+ //BA.debugLineNum = 117;BA.debugLine="Private Sub Spinner_Date_YY_ItemClick (Position As";
+ //BA.debugLineNum = 119;BA.debugLine="End Sub";
 return "";
 }
 public static String  _spinner_timer_hh_itemclick(int _position,Object _value) throws Exception{
- //BA.debugLineNum = 102;BA.debugLine="Private Sub Spinner_Timer_HH_ItemClick (Position A";
- //BA.debugLineNum = 104;BA.debugLine="End Sub";
+ //BA.debugLineNum = 125;BA.debugLine="Private Sub Spinner_Timer_HH_ItemClick (Position A";
+ //BA.debugLineNum = 127;BA.debugLine="End Sub";
 return "";
 }
 public static String  _spinner_timer_mm_itemclick(int _position,Object _value) throws Exception{
- //BA.debugLineNum = 98;BA.debugLine="Private Sub Spinner_Timer_MM_ItemClick (Position A";
- //BA.debugLineNum = 100;BA.debugLine="End Sub";
+ //BA.debugLineNum = 121;BA.debugLine="Private Sub Spinner_Timer_MM_ItemClick (Position A";
+ //BA.debugLineNum = 123;BA.debugLine="End Sub";
 return "";
 }
 public static String  _v5() throws Exception{
- //BA.debugLineNum = 48;BA.debugLine="Sub StartApp";
- //BA.debugLineNum = 50;BA.debugLine="EditText_Timer_HH.text=DateTime.GetHour(DateTime.";
+ //BA.debugLineNum = 52;BA.debugLine="Sub StartApp";
+ //BA.debugLineNum = 54;BA.debugLine="EditText_Timer_HH.text=DateTime.GetHour(DateTime.";
 mostCurrent._edittext_timer_hh.setText(BA.ObjectToCharSequence(anywheresoftware.b4a.keywords.Common.DateTime.GetHour(anywheresoftware.b4a.keywords.Common.DateTime.getNow())));
- //BA.debugLineNum = 51;BA.debugLine="EditText_Timer_MM.text=DateTime.GetMinute(DateTim";
+ //BA.debugLineNum = 55;BA.debugLine="EditText_Timer_MM.text=DateTime.GetMinute(DateTim";
 mostCurrent._edittext_timer_mm.setText(BA.ObjectToCharSequence(anywheresoftware.b4a.keywords.Common.DateTime.GetMinute(anywheresoftware.b4a.keywords.Common.DateTime.getNow())));
- //BA.debugLineNum = 52;BA.debugLine="EditText_Date_MM.text=DateTime.GetMonth(DateTime.";
+ //BA.debugLineNum = 56;BA.debugLine="EditText_Date_MM.text=DateTime.GetMonth(DateTime.";
 mostCurrent._edittext_date_mm.setText(BA.ObjectToCharSequence(anywheresoftware.b4a.keywords.Common.DateTime.GetMonth(anywheresoftware.b4a.keywords.Common.DateTime.getNow())));
- //BA.debugLineNum = 53;BA.debugLine="EditText_Date_DD.text=DateTime.GetDayOfMonth(Date";
+ //BA.debugLineNum = 57;BA.debugLine="EditText_Date_DD.text=DateTime.GetDayOfMonth(Date";
 mostCurrent._edittext_date_dd.setText(BA.ObjectToCharSequence(anywheresoftware.b4a.keywords.Common.DateTime.GetDayOfMonth(anywheresoftware.b4a.keywords.Common.DateTime.getNow())));
- //BA.debugLineNum = 55;BA.debugLine="End Sub";
+ //BA.debugLineNum = 58;BA.debugLine="Text1=EditText_Note.Text=\"\"";
+mostCurrent._v7 = BA.ObjectToString((mostCurrent._edittext_note.getText()).equals(""));
+ //BA.debugLineNum = 59;BA.debugLine="End Sub";
 return "";
 }
 }

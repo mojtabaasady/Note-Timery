@@ -36,6 +36,7 @@ End Sub
 Sub Globals
 	'These global variables will be redeclared each time the activity is created.
 	Dim Text1,Text2 As String
+	Dim Gotopstatus as Boolean
 	Private Label_AddNewNote As Label
 	Private Label_ClearNewNote As Label
 	Private Label_CloseNewNote As Label
@@ -45,11 +46,14 @@ Sub Globals
 	Private EditText_Timer_MM As EditText
 	Private EditText_Date_MM As EditText
 	Private EditText_Date_DD As EditText
+	Private Panel_Note As Panel
+	Private Panel_ListView As Panel
 End Sub
 
 Sub Activity_Create(FirstTime As Boolean)
 	Activity.LoadLayout("Layout_Main")
 	StartApp
+	Gotopstatus=True
 End Sub
 
 Sub Activity_Resume
@@ -66,22 +70,41 @@ Sub StartApp
 	EditText_Timer_MM.text=DateTime.GetMinute(DateTime.Now)
 	EditText_Date_MM.text=DateTime.GetMonth(DateTime.Now)
 	EditText_Date_DD.text=DateTime.GetDayOfMonth(DateTime.Now)
-
+    Text1=EditText_Note.Text=""
 End Sub
 
 Private Sub Label_AddNewNote_Click
+	If EditText_Note.Text <> "" Then
+	
 	Text1=EditText_Note.Text
 	Text2="Time : "&EditText_Timer_HH.text&":"&EditText_Timer_MM.text & " Date : "&EditText_Date_MM.text&"/"&EditText_Date_DD.text
 	ListView_Note.AddSingleLine("New Timer")
 	ListView_Note.AddTwoLinesAndBitmap(Text1, Text2, LoadBitmap(File.DirAssets, "icon.png"))
+	
+	End If
 End Sub
 
 Private Sub Label_CloseNewNote_Click
+	If Gotopstatus=True Then
+		Panel_Note.Top=(-Panel_Note.Height)+100
+		Panel_ListView.Top=7.5%y
+		Panel_ListView.Height=90%y
+		ListView_Note.Height=90%y
+		Label_CloseNewNote.Text=""
+		Gotopstatus=False
+	Else if Gotopstatus=False Then
+		Panel_Note.Top=2.5%y
+		Panel_ListView.Top=Panel_Note.Height+5%y
+		Panel_ListView.Height=55%y
+		ListView_Note.Height=50%y
+		Label_CloseNewNote.Text=""
+		Gotopstatus=True
+	End If
 	
 End Sub
 
 Private Sub Label_ClearNewNote_Click
-	
+	StartApp
 End Sub
 
 
